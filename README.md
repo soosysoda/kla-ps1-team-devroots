@@ -1,0 +1,142 @@
+<div align="center">
+
+# AI-Based Restoration of Degraded Semiconductor Inspection Images
+
+**SEMICON India Hackathon 2026 · Track 1 (PS01, sponsored by KLA)**
+
+Joint denoising + 2x super-resolution for grayscale semiconductor inspection imagery
+
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
+</div>
+
+---
+
+## Overview
+
+Semiconductor inspection images are frequently captured at reduced resolution
+and corrupted by speckle noise, which can push pixel intensities beyond the
+true signal range. This repository restores such images in a **single forward
+pass**: denoising and 2x spatial super-resolution happen together, rather than
+as a two-stage pipeline, to keep inference fast enough for the challenge's
+GPU-time benchmark.
+
+**What the model does:**
+
+| Input | Output |
+|---|---|
+| Degraded grayscale image (128×128 or 256×256), speckle noise, possible intensity overshoot | Restored grayscale image (256×256 or 512×512), matching ground truth |
+
+## Approach
+
+- **Architecture** — a NAFNet-style encoder-decoder (nonlinear-activation-free
+  blocks) with a PixelShuffle upsampling head. Fully convolutional, so it
+  handles both dataset size classes (128→256 and 256→512) without any
+  architectural changes.
+- **Loss** — Charbonnier (robust to speckle-noise outliers) + multi-scale
+  SSIM (optimizes a graded metric directly) + an FFT magnitude term
+  (recovers high-frequency edge detail that pixel losses under-penalize) +
+  optional LPIPS perceptual loss (the third graded metric).
+- **Generalization** — randomized degradation augmentation at train time
+  (varying noise severity, blur) so the model isn't tuned to a single fixed
+  noise distribution, targeting the out-of-distribution portion of the test
+  set.
+- **Inference speed** — fp16 autocast, `torch.inference_mode()`, and a
+  GPU warm-up pass excluded from timing, matching the official benchmark
+  methodology (script startup, model init, disk I/O, and inference all
+  measured on an NVIDIA H100).
+
+## Repository structure
+
+```
+.
+├── model.py           # NAFNet-style restoration + super-resolution network
+├── losses.py           # Charbonnier + MS-SSIM + FFT + optional LPIPS loss
+├── dataset.py           # Dataset loader — handles mixed resolutions, degradation augmentation
+├── train.py            # Training loop (AMP, checkpointing, validation)
+├── eval.py             # Standalone inference script (used as-is for benchmarking)
+├── requirements.txt     # Dependencies
+└── README.md
+```
+
+## Quickstart
+
+### 1. Setup
+
+```bash
+git clone <this-repo-url>
+cd ps01_restoration
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Requires Python 3.10+. A CUDA-capable GPU is strongly recommended for
+training; CPU works for small-scale testing but will be slow.
+
+### 2. Data
+
+Place the dataset under `data/train/` — the loader auto-detects several
+common layouts (folder-based `degraded/`+`clean/`, a single stacked `.npy`
+array, or flat `*_noisy.npy`/`*_gt.npy` suffix pairs). No code changes
+needed for any of these.
+
+### 3. Train
+
+```bash
+python train.py --data_root data/ --epochs 100 --batch_size 8 --width 32
+```
+
+Checkpoints are saved to `checkpoints/best_model.pt` (best validation SSIM)
+and `checkpoints/last_model.pt`. Resume any interrupted run with:
+
+```bash
+python train.py --data_root data/ --resume checkpoints/last_model.pt --epochs 100
+```
+
+Key flags:
+
+| Flag | Purpose |
+|---|---|
+| `--width` | Model capacity / speed tradeoff (16 = fastest, 32 = default, higher = higher quality) |
+| `--lambda_lpips` | Perceptual loss weight, off by default — try `0.1` for an extra quality boost |
+| `--batch_size` | Base batch size; automatically scaled down for larger-resolution samples |
+
+### 4. Run inference
+
+```bash
+python eval.py --input_dir <test_images_dir> --output_dir <output_dir> --checkpoint checkpoints/best_model.pt
+```
+
+Standalone, dependency-light, and takes only an input/output directory
+pair — matches the official evaluation harness. Optionally pass `--gt_dir`
+to also print PSNR / SSIM / LPIPS and per-image inference time for your
+own validation.
+
+## Results
+
+| Metric | Value |
+|---|---|
+| SSIM | _TBD_ |
+| PSNR (dB) | _TBD_ |
+| LPIPS | _TBD_ |
+| Avg. inference time / image (H100) | _TBD_ |
+
+*(Fill in once training completes on the full dataset.)*
+
+## Known limitations
+
+_TBD — document honest failure cases here once real results are in (e.g.
+performance on very high noise severity, or degradation types not seen
+during training augmentation). The rubric explicitly rewards honest
+reporting of where the model struggles._
+
+## Team
+
+_Team name / members here_
+
+## License
+
+MIT — see [LICENSE](LICENSE).
