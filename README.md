@@ -140,3 +140,34 @@ _Team name / members here_
 ## License & Terms
 
 This project is open-source software licensed under the **[MIT License](LICENSE)**.
+
+```text
+Copyright (c) 2026 DevRoots
+
+🟢 Permissions,🔵 Conditions,🔴 Limitations
+Commercial Use — Free for commercial purposes,License & Copyright Notice — Must keep copyright notice intact,No Liability — Authors are not liable for damages
+Modification — Free to edit and adapt source code,,"No Warranty — Provided ""as-is"" without guarantees"
+Distribution — Free to redistribute modified versions,,
+Private Use — Free to run and test internally,,
+
+MIT License
+
+Copyright (c) 2026 DevRoots
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
