@@ -9,9 +9,9 @@
 
   <br>
 
-  <!-- 3D FLOATING TECH ELEMENT -->
-  <!-- This adds a transparent, looping 3D AI/Tech animation -->
-  <img src="https://github.com/soosysoda/kla-ps1-team-devroots/blob/main/semiconductor.gif?raw=true" width="150" alt="3D AI Chip"/>
+  <!-- 3D FLOATING TECH ELEMENT (NOW BIGGER!) -->
+  <!-- Change width="300" to 400 or 500 if you want it even more massive -->
+  <img src="https://github.com/soosysoda/kla-ps1-team-devroots/blob/main/semiconductor.gif?raw=true" width="300" alt="3D AI Chip"/>
   
   <br>
 
@@ -26,7 +26,6 @@
     <i>An activation-free, single-pass restoration pipeline for grayscale semiconductor inspection.</i>
   </p>
 </div>
-
 ## Overview
 
 Semiconductor inspection images are frequently captured at reduced resolution
