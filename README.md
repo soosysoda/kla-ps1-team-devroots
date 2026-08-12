@@ -141,15 +141,20 @@ _Team name / members here_
 
 This project is open-source software licensed under the **[MIT License](LICENSE)**.
 
-```text
-Copyright (c) 2026 DevRoots
+> **Copyright (c) 2026 DevRoots**
 
-🟢 Permissions,🔵 Conditions,🔴 Limitations
-Commercial Use — Free for commercial purposes,License & Copyright Notice — Must keep copyright notice intact,No Liability — Authors are not liable for damages
-Modification — Free to edit and adapt source code,,"No Warranty — Provided ""as-is"" without guarantees"
-Distribution — Free to redistribute modified versions,,
-Private Use — Free to run and test internally,,
+### License Summary
 
+| 🟢 Permissions | 🔵 Conditions | 🔴 Limitations |
+| :--- | :--- | :--- |
+| **Commercial Use** — Free for commercial purposes | **License & Copyright Notice** — Must keep copyright notice intact | **No Liability** — Authors are not liable for damages |
+| **Modification** — Free to edit and adapt source code | | **No Warranty** — Provided "as-is" without guarantees |
+| **Distribution** — Free to redistribute modified versions | | |
+| **Private Use** — Free to run and test internally | | |
+
+<details>
+<summary><b>Click to view full legal license text</b></summary>
+<br>
 MIT License
 
 Copyright (c) 2026 DevRoots
@@ -171,3 +176,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+</details>
