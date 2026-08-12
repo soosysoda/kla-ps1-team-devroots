@@ -1,15 +1,30 @@
+<!-- ANIMATED WAVING HEADER -->
 <div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0F172A&height=200&section=header&text=AI%20Image%20Restoration&fontSize=50&fontColor=38BDF8&animation=twinkling" width="100%"/>
+  
+  <!-- ANIMATED TYPING SUBTITLE -->
+  <a href="https://github.com/soosysoda/kla-ps1-team-devroots">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=F472B6&center=true&vCenter=true&width=600&lines=Suppressing+Speckle+Noise...;2x+Spatial+Super-Resolution...;Optimized+for+NVIDIA+H100...;Team+DevRoots+-+KLA+Hackathon" alt="Typing SVG" />
+  </a>
 
-# AI-Based Restoration of Degraded Semiconductor Inspection Images
+  <br>
 
-**SEMICON India Hackathon 2026 · Track 1 (PS01, sponsored by KLA)**
+  <!-- 3D FLOATING TECH ELEMENT -->
+  <!-- This adds a transparent, looping 3D AI/Tech animation -->
+  <img src="https://cdn.pixabay.com/animation/2023/06/13/15/12/15-12-47-323_512.gif" width="150" alt="3D AI Chip"/>
+  
+  <br>
 
-Joint denoising + 2x super-resolution for grayscale semiconductor inspection imagery
+  <!-- CLEAN BADGES -->
+  <img src="https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?style=for-the-badge&logo=pytorch" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/Target_GPU-NVIDIA_H100-76B900?style=for-the-badge&logo=nvidia" alt="NVIDIA H100"/>
+  <img src="https://img.shields.io/badge/Status-Hackathon_Ready-38BDF8?style=for-the-badge" alt="Status"/>
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch)](https://pytorch.org/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-
+  <p align="center" style="font-size: 1.2rem; margin-top: 20px;">
+    <b>SEMICON India Hackathon 2026 · Track 1 (PS01, sponsored by KLA)</b><br>
+    <i>An activation-free, single-pass restoration pipeline for grayscale semiconductor inspection.</i>
+  </p>
 </div>
 
 ---
