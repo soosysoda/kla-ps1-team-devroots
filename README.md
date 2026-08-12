@@ -26,6 +26,7 @@
     <i>An activation-free, single-pass restoration pipeline for grayscale semiconductor inspection.</i>
   </p>
 </div>
+
 ## Overview
 
 Semiconductor inspection images are frequently captured at reduced resolution
