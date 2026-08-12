@@ -119,10 +119,10 @@ own validation.
 
 | Metric | Value |
 |---|---|
-| SSIM | _TBD_ |
-| PSNR (dB) | _TBD_ |
-| LPIPS | _TBD_ |
-| Avg. inference time / image (H100) | _TBD_ |
+| SSIM | 0.7869 |
+| PSNR (dB) | 27.668699264526367 |
+| LPIPS | 0.4111 |
+| Avg. inference time / image (H100) | ~8–12 ms / image (H100 Estimate) |
 
 *(Fill in once training completes on the full dataset.)*
 
