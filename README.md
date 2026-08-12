@@ -11,7 +11,7 @@
 
   <!-- 3D FLOATING TECH ELEMENT -->
   <!-- This adds a transparent, looping 3D AI/Tech animation -->
-  <img src="[https://github.com/soosysoda/kla-ps1-team-devroots/blob/main/semiconductor.gif]" width="150" alt="3D AI Chip"/>
+  <img src="[[https://github.com/soosysoda/kla-ps1-team-devroots/blob/main/semiconductor.gif?raw=true]" width="150" alt="3D AI Chip"/>
   
   <br>
 
