@@ -137,6 +137,6 @@ reporting of where the model struggles._
 
 _Team name / members here_
 
-## License
+## License & Terms
 
-MIT — see [LICENSE](LICENSE).
+This project is open-source software licensed under the **[MIT License](LICENSE)**.
