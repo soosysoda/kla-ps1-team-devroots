@@ -1,6 +1,6 @@
 <!-- ANIMATED WAVING HEADER -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0F172A&height=200&section=header&text=AI-Based%14R%14Restoration%14of%14Degraded%14Images%14for%14Semiconductor%14Inspection&fontSize=50&fontColor=38BDF8&animation=twinkling" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0F172A&height=200&section=header&text=AI-Based%20R%20Restoration%20of%20Degraded%20Images%20for%20Semiconductor%20Inspection&fontSize=30&fontColor=38BDF8&animation=twinkling" width="100%"/>
   
   <!-- ANIMATED TYPING SUBTITLE -->
   <a href="https://github.com/soosysoda/kla-ps1-team-devroots">
