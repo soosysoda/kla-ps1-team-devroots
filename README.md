@@ -139,14 +139,23 @@ own validation.
 
 ## Known limitations
 
-_TBD — document honest failure cases here once real results are in (e.g.
-performance on very high noise severity, or degradation types not seen
-during training augmentation). The rubric explicitly rewards honest
-reporting of where the model struggles._
+- **Dependence on training data**: Performance may decrease on degradation patterns significantly different from those seen during training.
+- **OOD generalization**: Synthetic noise and blur augmentation improve robustness, but cannot cover every possible real-world semiconductor image degradation.
+- **Detail hallucination**: Super-resolution may occasionally introduce artificial textures or fine details that are not present in the original image.
+- **Loss-function trade-offs**: Optimizing PSNR/SSIM/frequency losses simultaneously may create a trade-off between pixel fidelity and perceptual sharpness.
+- **Computational cost**: The NAFNet-based architecture and composite losses are more computationally expensive than simpler CNN-based restoration methods.
+- **Numerical stability**: MS-SSIM, FFT-based losses, and mixed-precision training can be sensitive to extreme values and may require careful normalization and training settings.
+- **Resolution constraint**: The current architecture is designed specifically for 2× upscaling, so it is not directly suitable for arbitrary scaling factors.
+- **No ground truth during testing**: Since the test set contains only degraded images, the final restoration quality cannot be locally verified using PSNR/SSIM/LPIPS before submission.
 
 ## Team
 
-_Team name / members here_
+**Team DevRoots**
+College Name - **GCETTS**
+- Arkapravo Mukherjee, CSE, 3rd Year
+- Archisman Banerjee, CSE, 3rd Year
+- Anushka Saha, IT, 3rd Year
+- Arintak Das, CSE, 3rd Year
 
 ## License & Terms
 
