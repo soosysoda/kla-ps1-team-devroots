@@ -151,7 +151,7 @@ own validation.
 ## Team
 
 **Team DevRoots**
-College Name - **GCETTS**
+\\College Name - **GCETTS**
 - Arkapravo Mukherjee, CSE, 3rd Year
 - Archisman Banerjee, CSE, 3rd Year
 - Anushka Saha, IT, 3rd Year
