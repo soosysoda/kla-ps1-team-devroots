@@ -1,6 +1,6 @@
 <!-- ANIMATED WAVING HEADER -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0F172A&height=200&section=header&text=AI%20Image%20Restoration&fontSize=50&fontColor=38BDF8&animation=twinkling" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0F172A&height=200&section=header&text=AI-Based%20R%20Restoration%20of%20Degraded%20Images%20for%20Semiconductor%20Inspection&fontSize=50&fontColor=38BDF8&animation=twinkling" width="100%"/>
   
   <!-- ANIMATED TYPING SUBTITLE -->
   <a href="https://github.com/soosysoda/kla-ps1-team-devroots">
@@ -136,8 +136,6 @@ own validation.
 | PSNR (dB) | 27.668699264526367 |
 | LPIPS | 0.4111 |
 | Avg. inference time / image (H100) | ~8–12 ms / image (H100 Estimate) |
-
-*(Fill in once training completes on the full dataset.)*
 
 ## Known limitations
 
